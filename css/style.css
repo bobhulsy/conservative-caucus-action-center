@@ -1154,11 +1154,11 @@ main {
 
 .featured-campaign-header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
     margin-bottom: var(--space-lg);
-    flex-wrap: wrap;
-    gap: var(--space-md);
+    gap: var(--space-sm);
 }
 
 .featured-campaign-header h2 {
@@ -1190,9 +1190,10 @@ main {
 
 .featured-share-buttons {
     display: flex;
-    gap: var(--space-md);
+    gap: var(--space-sm);
     justify-content: center;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 /* Section Headings */
@@ -1230,15 +1231,23 @@ main {
     justify-content: center;
 }
 
-.share-button-card img {
-    width: 40px;
-    height: 40px;
+.share-button-card img,
+.share-button-card svg {
+    width: 32px;
+    height: 32px;
     display: block;
     transition: all 0.3s ease;
 }
 
 .share-button-card:hover {
-    transform: translateY(-3px) scale(1.08);
+    transform: translateY(-2px);
+}
+
+/* Copy link button styling */
+.copy-link-btn svg {
+    background: var(--gray-500);
+    border-radius: 50%;
+    padding: 6px;
 }
 
 .share-button-card:active {
