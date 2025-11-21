@@ -280,7 +280,8 @@
                 description: 'Take action with The Conservative Caucus on this important issue.',
             };
             // Auto-generate image path from campaign ID if not specified
-            data.image = data.image || `/images/campaigns/${cid}.jpg`;
+            // Supports both .png and .jpg - defaults to .png
+            data.image = data.image || `/images/campaigns/${cid}.png`;
             return data;
         }
 
