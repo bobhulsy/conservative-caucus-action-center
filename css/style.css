@@ -1289,7 +1289,12 @@ main {
     }
 
     .featured-widget-wrapper {
-        padding: var(--space-md);
+        padding: 0;
+        background: transparent;
+    }
+
+    .featured-widget-wrapper one-click-widget {
+        width: 100%;
     }
 
     .section-heading {
