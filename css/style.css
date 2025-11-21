@@ -1136,6 +1136,75 @@ main {
     letter-spacing: 0.05em;
 }
 
+/* Featured Campaign Section */
+.featured-campaign-section {
+    padding: var(--space-xl) var(--space-md);
+    background: var(--white);
+}
+
+.featured-campaign-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--white);
+    border-radius: 12px;
+    padding: var(--space-xl);
+    box-shadow: var(--shadow-large);
+    border: 2px solid var(--red-700);
+}
+
+.featured-campaign-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-lg);
+    flex-wrap: wrap;
+    gap: var(--space-md);
+}
+
+.featured-campaign-header h2 {
+    color: var(--navy-700);
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.featured-widget-wrapper {
+    margin-bottom: var(--space-xl);
+    background: var(--gray-50);
+    border-radius: 8px;
+    padding: var(--space-lg);
+}
+
+.featured-campaign-share {
+    text-align: center;
+    padding-top: var(--space-lg);
+    border-top: 2px solid var(--gray-200);
+}
+
+.featured-campaign-share h3 {
+    color: var(--navy-700);
+    font-size: 1.25rem;
+    margin-bottom: var(--space-md);
+    font-weight: 600;
+}
+
+.featured-share-buttons {
+    display: flex;
+    gap: var(--space-md);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Section Headings */
+.section-heading {
+    color: var(--navy-700);
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: var(--space-xl);
+    text-align: center;
+    grid-column: 1 / -1;
+}
+
 /* OneClickPolitics Campaign Cards */
 .ocp-campaign-card .action-card-content {
     padding: var(--space-md) 0;
@@ -1186,6 +1255,26 @@ main {
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
+    .featured-campaign-section {
+        padding: var(--space-lg) var(--space-md);
+    }
+
+    .featured-campaign-container {
+        padding: var(--space-lg);
+    }
+
+    .featured-campaign-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .featured-widget-wrapper {
+        padding: var(--space-md);
+    }
+
+    .section-heading {
+        font-size: 1.5rem;
+    }
+
     .action-hero {
         padding: var(--space-2xl) var(--space-md);
     }
