@@ -5,7 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Take Action | The Conservative Caucus</title>
     <meta name="description" content="Join The Conservative Caucus in taking action for conservative principles. Choose from our active campaigns and make your voice heard.">
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://action.theconservativecaucus.com/">
+    <meta property="og:title" content="Take Action | The Conservative Caucus">
+    <meta property="og:description" content="Join The Conservative Caucus in taking action for conservative principles. Choose from our active campaigns and make your voice heard.">
+    <meta property="og:image" content="https://action.theconservativecaucus.com/images/social-share.jpg">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://action.theconservativecaucus.com/">
+    <meta name="twitter:title" content="Take Action | The Conservative Caucus">
+    <meta name="twitter:description" content="Join The Conservative Caucus in taking action for conservative principles. Choose from our active campaigns and make your voice heard.">
+    <meta name="twitter:image" content="https://action.theconservativecaucus.com/images/social-share.jpg">
+
     <link rel="stylesheet" href="/css/style.css">
+
+    <!-- OneClickPolitics Widget -->
+    <script src="https://widget-prod-files.global.ssl.fastly.net/ocp-widget.js" type="module"></script>
+    <link href="https://widget-prod-files.global.ssl.fastly.net/ocp-widget.css" rel="stylesheet" />
 
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-G0VRPWL4YS"></script>
@@ -41,8 +60,34 @@
         <!-- Action Grid -->
         <section class="action-grid-section">
             <div class="action-grid-container">
-                <!-- Action cards will be dynamically populated here or hardcoded -->
-                <!-- Example Action Card -->
+                <!-- OneClickPolitics Live Widget -->
+                <article class="action-card ocp-campaign-card" data-cid="s1UjbWIWIQtlk6kUBymSH">
+                    <div class="action-card-header">
+                        <span class="action-card-badge">ACTIVE</span>
+                        <h2>Active Campaign</h2>
+                    </div>
+                    <div class="action-card-content">
+                        <one-click-widget cid="s1UjbWIWIQtlk6kUBymSH" language="en" env="production"></one-click-widget>
+                    </div>
+                    <div class="action-card-footer">
+                        <div class="action-card-share">
+                            <button class="share-button" onclick="shareOnFacebook('s1UjbWIWIQtlk6kUBymSH')" aria-label="Share on Facebook">
+                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                            </button>
+                            <button class="share-button" onclick="shareOnTwitter('s1UjbWIWIQtlk6kUBymSH')" aria-label="Share on Twitter">
+                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                            </button>
+                            <button class="share-button" onclick="shareViaEmail('s1UjbWIWIQtlk6kUBymSH')" aria-label="Share via Email">
+                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                            </button>
+                            <button class="share-button" onclick="copyShareLink('s1UjbWIWIQtlk6kUBymSH')" aria-label="Copy Link">
+                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Example Action Card 1 -->
                 <article class="action-card">
                     <div class="action-card-header">
                         <span class="action-card-badge">ACTIVE</span>
@@ -60,7 +105,7 @@
                 <!-- Example Action Card 2 -->
                 <article class="action-card">
                     <div class="action-card-header">
-                        <span class="action-card-badge active-badge">ACTIVE</span>
+                        <span class="action-card-badge">ACTIVE</span>
                         <h2>Support Term Limits</h2>
                     </div>
                     <div class="action-card-content">
@@ -221,5 +266,51 @@
     </footer>
 
     <script src="/js/forms.js"></script>
+    <script>
+        // Social sharing functions
+        function getCampaignUrl(cid) {
+            return `https://action.theconservativecaucus.com/?campaign=${cid}`;
+        }
+
+        function getCampaignTitle(cid) {
+            // You can customize titles per campaign
+            return 'Take Action with The Conservative Caucus';
+        }
+
+        function shareOnFacebook(cid) {
+            const url = encodeURIComponent(getCampaignUrl(cid));
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank', 'width=600,height=400');
+        }
+
+        function shareOnTwitter(cid) {
+            const url = encodeURIComponent(getCampaignUrl(cid));
+            const text = encodeURIComponent(getCampaignTitle(cid));
+            window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank', 'width=600,height=400');
+        }
+
+        function shareViaEmail(cid) {
+            const url = encodeURIComponent(getCampaignUrl(cid));
+            const subject = encodeURIComponent(getCampaignTitle(cid));
+            const body = encodeURIComponent(`Check out this important campaign from The Conservative Caucus: ${getCampaignUrl(cid)}`);
+            window.location.href = `mailto:?subject=${subject}&body=${body}`;
+        }
+
+        function copyShareLink(cid) {
+            const url = getCampaignUrl(cid);
+            navigator.clipboard.writeText(url).then(() => {
+                // Show a temporary success message
+                const button = event.target.closest('.share-button');
+                const originalHTML = button.innerHTML;
+                button.innerHTML = '<svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>';
+                button.style.color = '#28a745';
+                setTimeout(() => {
+                    button.innerHTML = originalHTML;
+                    button.style.color = '';
+                }, 2000);
+            }).catch(err => {
+                alert('Failed to copy link. Please try again.');
+            });
+        }
+    </script>
 </body>
 </html>

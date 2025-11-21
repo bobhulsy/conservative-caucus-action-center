@@ -1136,6 +1136,51 @@ main {
     letter-spacing: 0.05em;
 }
 
+/* OneClickPolitics Campaign Cards */
+.ocp-campaign-card .action-card-content {
+    padding: var(--space-md) 0;
+}
+
+/* Share Buttons */
+.action-card-share {
+    display: flex;
+    gap: var(--space-sm);
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.share-button {
+    background: var(--gray-200);
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    color: var(--navy-700);
+    box-shadow: var(--shadow-small);
+}
+
+.share-button:hover {
+    background: var(--navy-700);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+}
+
+.share-button:active {
+    transform: translateY(0);
+}
+
+.share-button svg {
+    width: 20px;
+    height: 20px;
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     .action-hero {
@@ -1166,6 +1211,10 @@ main {
 
     .action-card-meta {
         text-align: center;
+    }
+
+    .action-card-share {
+        justify-content: center;
     }
 }
 
