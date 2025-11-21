@@ -1305,83 +1305,65 @@ main {
 .campaign-share-section {
     background: var(--gray-200);
     border-radius: 12px;
-    padding: var(--space-lg);
+    padding: var(--space-xl);
     text-align: center;
     box-shadow: var(--shadow-small);
 }
 
 .campaign-share-section h3 {
     color: var(--navy-700);
-    font-size: 1.25rem;
-    margin-bottom: var(--space-md);
+    font-size: 1.5rem;
+    margin-bottom: var(--space-lg);
+    font-weight: 700;
 }
 
 .campaign-share-buttons {
     display: flex;
-    gap: var(--space-md);
+    gap: var(--space-lg);
     justify-content: center;
     flex-wrap: wrap;
+    margin-bottom: var(--space-md);
 }
 
-.share-button-large {
+.share-button-icon {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    box-shadow: var(--shadow-small);
-    color: var(--white);
+    justify-content: center;
 }
 
-.share-button-large:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-medium);
+.share-button-icon img {
+    width: 64px;
+    height: 64px;
+    display: block;
+    transition: all 0.3s ease;
 }
 
-.share-button-large:active {
-    transform: translateY(0);
+.share-button-icon:hover {
+    transform: translateY(-4px) scale(1.1);
 }
 
-.share-button-large svg {
-    width: 24px;
-    height: 24px;
+.share-button-icon:active {
+    transform: translateY(-2px) scale(1.05);
 }
 
-.share-button-large.facebook {
-    background: #1877F2;
+.share-button-icon svg {
+    transition: all 0.3s ease;
 }
 
-.share-button-large.facebook:hover {
-    background: #145dbf;
+.share-button-icon:hover svg {
+    transform: scale(1.1);
 }
 
-.share-button-large.twitter {
-    background: #000000;
-}
-
-.share-button-large.twitter:hover {
-    background: #333333;
-}
-
-.share-button-large.email {
-    background: var(--navy-700);
-}
-
-.share-button-large.email:hover {
-    background: var(--navy-800);
-}
-
-.share-button-large.copy {
-    background: var(--gray-600);
-}
-
-.share-button-large.copy:hover {
-    background: var(--gray-700);
+.share-help-text {
+    font-size: 0.95rem;
+    min-height: 24px;
+    margin: 0;
+    padding-top: var(--space-sm);
 }
 
 /* Responsive Campaign Page */
@@ -1394,13 +1376,17 @@ main {
         padding: var(--space-lg);
     }
 
-    .campaign-share-buttons {
-        flex-direction: column;
+    .campaign-share-section {
+        padding: var(--space-lg);
     }
 
-    .share-button-large {
-        width: 100%;
-        justify-content: center;
+    .campaign-share-buttons {
+        gap: var(--space-md);
+    }
+
+    .share-button-icon img {
+        width: 56px;
+        height: 56px;
     }
 }
 
