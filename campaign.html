@@ -244,14 +244,27 @@
 
     <script src="/js/forms.js"></script>
     <script>
-        // Campaign configuration object
+        // ===========================================
+        // CAMPAIGN CONFIGURATION
+        // ===========================================
+        // To add a new campaign:
+        // 1. Add a 1200x630px image to /images/campaigns/{cid}.jpg
+        // 2. Add entry below with the OneClickPolitics campaign ID (cid)
+        //
+        // Image naming convention: /images/campaigns/{cid}.jpg
+        // Example: /images/campaigns/eLN1BQF0AW11pFo6vLzRs.jpg
+        // ===========================================
+
         const campaigns = {
-            's1UjbWIWIQtlk6kUBymSH': {
-                title: 'Active Campaign',
-                description: 'Join us in taking action on this important issue.',
-                image: '/images/campaigns/campaign-1.jpg'
-            }
-            // Add more campaigns here as needed
+            'eLN1BQF0AW11pFo6vLzRs': {
+                title: "Pass Trump's Agenda WITHOUT Ending the Filibuster",
+                description: 'Contact your Senators now to support passing the Trump agenda through budget reconciliation.',
+            },
+            // ADD NEW CAMPAIGNS HERE:
+            // 'campaignIdHere': {
+            //     title: 'Campaign Title',
+            //     description: 'Brief description for social sharing.',
+            // },
         };
 
         // Get campaign ID from URL parameter
@@ -260,13 +273,15 @@
             return urlParams.get('cid');
         }
 
-        // Get current campaign data
+        // Get current campaign data (auto-generates image path from cid)
         function getCampaignData(cid) {
-            return campaigns[cid] || {
-                title: 'Campaign',
-                description: 'Take action with The Conservative Caucus.',
-                image: null
+            const data = campaigns[cid] || {
+                title: 'Take Action',
+                description: 'Take action with The Conservative Caucus on this important issue.',
             };
+            // Auto-generate image path from campaign ID if not specified
+            data.image = data.image || `/images/campaigns/${cid}.jpg`;
+            return data;
         }
 
         // Initialize page on load
