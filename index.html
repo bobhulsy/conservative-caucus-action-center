@@ -305,17 +305,21 @@
             window.location.href = `/campaign.html?cid=${cid}`;
         }
 
+        // Campaign share data
+        const campaignShareData = {
+            'featured': {
+                url: 'https://action.theconservativecaucus.com/',
+                twitterText: "Pass Trump's Agenda WITHOUT Ending the Filibuster!\n\nThe Senate has rules that let Majority Leader Thune pass ALL of Trump's agenda WITHOUT ending the filibuster. Send your GOP Senators an instant message to use this tactic to make America great again!"
+            }
+        };
+
         // Social sharing functions
         function getCampaignUrl(cid) {
-            if (cid === 'featured') {
-                return 'https://action.theconservativecaucus.com/';
-            }
-            return `https://action.theconservativecaucus.com/campaign.html?cid=${cid}`;
+            return campaignShareData[cid]?.url || `https://action.theconservativecaucus.com/campaign.html?cid=${cid}`;
         }
 
-        function getCampaignTitle(cid) {
-            // You can customize titles per campaign
-            return 'Take Action with The Conservative Caucus';
+        function getTwitterText(cid) {
+            return campaignShareData[cid]?.twitterText || 'Take Action with The Conservative Caucus';
         }
 
         function shareOnFacebook(cid) {
@@ -325,7 +329,7 @@
 
         function shareOnTwitter(cid) {
             const url = encodeURIComponent(getCampaignUrl(cid));
-            const text = encodeURIComponent(getCampaignTitle(cid));
+            const text = encodeURIComponent(getTwitterText(cid));
             window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank', 'width=600,height=400');
         }
 

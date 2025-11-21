@@ -11,7 +11,7 @@
 const campaigns = {
   'eLN1BQF0AW11pFo6vLzRs': {
     title: "Pass Trump's Agenda WITHOUT Ending the Filibuster!",
-    description: 'Contact your Senators now to support passing the Trump agenda through budget reconciliation.',
+    description: "The Senate has rules that let Majority Leader Thune pass ALL of Trump's agenda WITHOUT ending the filibuster. Send your GOP Senators an instant message to make America great again!",
   },
   // ADD NEW CAMPAIGNS HERE:
   // 'campaignIdHere': {

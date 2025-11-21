@@ -257,13 +257,15 @@
 
         const campaigns = {
             'eLN1BQF0AW11pFo6vLzRs': {
-                title: "Pass Trump's Agenda WITHOUT Ending the Filibuster",
+                title: "Pass Trump's Agenda WITHOUT Ending the Filibuster!",
                 description: 'Contact your Senators now to support passing the Trump agenda through budget reconciliation.',
+                twitterText: "Pass Trump's Agenda WITHOUT Ending the Filibuster!\n\nThe Senate has rules that let Majority Leader Thune pass ALL of Trump's agenda WITHOUT ending the filibuster. Send your GOP Senators an instant message to use this tactic to make America great again!"
             },
             // ADD NEW CAMPAIGNS HERE:
             // 'campaignIdHere': {
             //     title: 'Campaign Title',
             //     description: 'Brief description for social sharing.',
+            //     twitterText: 'Custom Twitter share text with call to action'
             // },
         };
 
@@ -350,7 +352,9 @@
 
         function shareOnTwitter() {
             const url = encodeURIComponent(getCurrentUrl());
-            const text = encodeURIComponent(getCampaignTitle());
+            const cid = getCampaignId();
+            const campaignData = getCampaignData(cid);
+            const text = encodeURIComponent(campaignData.twitterText || getCampaignTitle());
             window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank', 'width=600,height=400');
         }
 
