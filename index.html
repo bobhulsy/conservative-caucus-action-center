@@ -22,10 +22,6 @@
 
     <link rel="stylesheet" href="/css/style.css">
 
-    <!-- OneClickPolitics Widget -->
-    <script src="https://widget-prod-files.global.ssl.fastly.net/ocp-widget.js" type="module"></script>
-    <link href="https://widget-prod-files.global.ssl.fastly.net/ocp-widget.css" rel="stylesheet" />
-
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-G0VRPWL4YS"></script>
     <script>
@@ -67,8 +63,12 @@
 
                 <!-- OneClickPolitics Widget Embedded Directly -->
                 <div class="featured-widget-wrapper">
-                    <one-click-widget cid="eLN1BQF0AW11pFo6vLzRs" language="en" env="staging"></one-click-widget>
+                    <one-click-widget cid="eLN1BQF0AW11pFo6vLzRs" language="en" env="production"></one-click-widget>
                 </div>
+
+                <!-- OneClickPolitics Widget Scripts - Load AFTER widget element -->
+                <link href="https://widget-prod-files.global.ssl.fastly.net/ocp-widget.css" rel="stylesheet" />
+                <script type="module" src="https://widget-prod-files.global.ssl.fastly.net/ocp-widget.js"></script>
 
                 <!-- Social Share Buttons for Featured Campaign -->
                 <div class="featured-campaign-share">
