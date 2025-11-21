@@ -1219,6 +1219,192 @@ main {
 }
 
 /* ================================
+   CAMPAIGN PAGE - SINGLE CAMPAIGN VIEW
+   ================================ */
+
+.campaign-page-section {
+    padding: var(--space-xl) var(--space-md);
+}
+
+.campaign-page-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Back Button */
+.campaign-back {
+    margin-bottom: var(--space-lg);
+}
+
+.campaign-back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--navy-700);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+}
+
+.campaign-back-link:hover {
+    background: var(--gray-200);
+    color: var(--red-700);
+}
+
+.campaign-back-link svg {
+    transition: transform 0.2s ease;
+}
+
+.campaign-back-link:hover svg {
+    transform: translateX(-4px);
+}
+
+/* Featured Image */
+.campaign-featured-image {
+    margin-bottom: var(--space-xl);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-medium);
+}
+
+.campaign-featured-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Campaign Header */
+.campaign-header {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+}
+
+.campaign-header h1 {
+    color: var(--navy-800);
+    font-size: 2.5rem;
+    margin-bottom: 0;
+}
+
+/* Campaign Widget Container */
+.campaign-widget-container {
+    background: var(--white);
+    border-radius: 12px;
+    padding: var(--space-xl);
+    margin-bottom: var(--space-xl);
+    box-shadow: var(--shadow-medium);
+}
+
+#campaign-widget-wrapper {
+    width: 100%;
+}
+
+/* Campaign Share Section */
+.campaign-share-section {
+    background: var(--gray-200);
+    border-radius: 12px;
+    padding: var(--space-lg);
+    text-align: center;
+    box-shadow: var(--shadow-small);
+}
+
+.campaign-share-section h3 {
+    color: var(--navy-700);
+    font-size: 1.25rem;
+    margin-bottom: var(--space-md);
+}
+
+.campaign-share-buttons {
+    display: flex;
+    gap: var(--space-md);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.share-button-large {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: var(--shadow-small);
+    color: var(--white);
+}
+
+.share-button-large:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+}
+
+.share-button-large:active {
+    transform: translateY(0);
+}
+
+.share-button-large svg {
+    width: 24px;
+    height: 24px;
+}
+
+.share-button-large.facebook {
+    background: #1877F2;
+}
+
+.share-button-large.facebook:hover {
+    background: #145dbf;
+}
+
+.share-button-large.twitter {
+    background: #000000;
+}
+
+.share-button-large.twitter:hover {
+    background: #333333;
+}
+
+.share-button-large.email {
+    background: var(--navy-700);
+}
+
+.share-button-large.email:hover {
+    background: var(--navy-800);
+}
+
+.share-button-large.copy {
+    background: var(--gray-600);
+}
+
+.share-button-large.copy:hover {
+    background: var(--gray-700);
+}
+
+/* Responsive Campaign Page */
+@media (max-width: 768px) {
+    .campaign-header h1 {
+        font-size: 2rem;
+    }
+
+    .campaign-widget-container {
+        padding: var(--space-lg);
+    }
+
+    .campaign-share-buttons {
+        flex-direction: column;
+    }
+
+    .share-button-large {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* ================================
    FOOTER - COMPREHENSIVE DESIGN
    ================================ */
 footer {
