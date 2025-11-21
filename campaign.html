@@ -20,6 +20,20 @@
     <meta name="twitter:description" id="twitter-description" content="Take action with The Conservative Caucus on this important campaign.">
     <meta name="twitter:image" id="twitter-image" content="https://action.theconservativecaucus.com/images/social-share.jpg">
 
+    <!-- Content Security Policy - Allow OneClickPolitics widget and all its API endpoints -->
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://widget-prod-files.global.ssl.fastly.net https://d3n8a8pro7vhmx.cloudfront.net https://assets.ziggeo.com;
+        style-src 'self' 'unsafe-inline' https://widget-prod-files.global.ssl.fastly.net https://d3n8a8pro7vhmx.cloudfront.net https://assets.ziggeo.com;
+        img-src 'self' data: https:;
+        font-src 'self' data: https://d3n8a8pro7vhmx.cloudfront.net;
+        connect-src 'self' https://www.google-analytics.com https://d3n8a8pro7vhmx.cloudfront.net https://api-k8s.oneclickpolitics.com https://deliveries-production.oneclickpolitics.com https://external.oneclickpolitics.com https://*.ingest.us.sentry.io;
+        frame-src 'self';
+        object-src 'none';
+        base-uri 'self';
+        form-action 'self' https:;
+    ">
+
     <link rel="stylesheet" href="/css/style.css">
 
     <!-- OneClickPolitics Widget -->

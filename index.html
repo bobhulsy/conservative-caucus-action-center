@@ -20,14 +20,14 @@
     <meta name="twitter:description" content="Join The Conservative Caucus in taking action for conservative principles. Choose from our active campaigns and make your voice heard.">
     <meta name="twitter:image" content="https://action.theconservativecaucus.com/images/social-share.jpg">
 
-    <!-- Content Security Policy -->
+    <!-- Content Security Policy - Allow OneClickPolitics widget and all its API endpoints -->
     <meta http-equiv="Content-Security-Policy" content="
         default-src 'self';
-        script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://widget-prod-files.global.ssl.fastly.net https://d3n8a8pro7vhmx.cloudfront.net;
-        style-src 'self' 'unsafe-inline' https://widget-prod-files.global.ssl.fastly.net https://d3n8a8pro7vhmx.cloudfront.net;
+        script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://widget-prod-files.global.ssl.fastly.net https://d3n8a8pro7vhmx.cloudfront.net https://assets.ziggeo.com;
+        style-src 'self' 'unsafe-inline' https://widget-prod-files.global.ssl.fastly.net https://d3n8a8pro7vhmx.cloudfront.net https://assets.ziggeo.com;
         img-src 'self' data: https:;
         font-src 'self' data: https://d3n8a8pro7vhmx.cloudfront.net;
-        connect-src 'self' https://www.google-analytics.com https://d3n8a8pro7vhmx.cloudfront.net;
+        connect-src 'self' https://www.google-analytics.com https://d3n8a8pro7vhmx.cloudfront.net https://api-k8s.oneclickpolitics.com https://deliveries-production.oneclickpolitics.com https://external.oneclickpolitics.com https://*.ingest.us.sentry.io;
         frame-src 'self';
         object-src 'none';
         base-uri 'self';
