@@ -1147,38 +1147,41 @@ main {
     gap: var(--space-sm);
     justify-content: flex-start;
     flex-wrap: wrap;
+    align-items: center;
 }
 
-.share-button {
-    background: var(--gray-200);
+.share-button-card {
+    background: transparent;
     border: none;
-    border-radius: 6px;
-    padding: 0.5rem;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
+    padding: 0;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 36px;
-    height: 36px;
-    color: var(--navy-700);
-    box-shadow: var(--shadow-small);
 }
 
-.share-button:hover {
-    background: var(--navy-700);
-    color: var(--white);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-medium);
+.share-button-card img {
+    width: 40px;
+    height: 40px;
+    display: block;
+    transition: all 0.3s ease;
 }
 
-.share-button:active {
-    transform: translateY(0);
+.share-button-card:hover {
+    transform: translateY(-3px) scale(1.08);
 }
 
-.share-button svg {
-    width: 20px;
-    height: 20px;
+.share-button-card:active {
+    transform: translateY(-1px) scale(1.04);
+}
+
+.share-button-card svg {
+    transition: all 0.3s ease;
+}
+
+.share-button-card:hover svg {
+    transform: scale(1.08);
 }
 
 /* Mobile Responsiveness */
