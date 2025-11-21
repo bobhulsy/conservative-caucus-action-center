@@ -251,6 +251,7 @@
         // Initialize page on load
         document.addEventListener('DOMContentLoaded', function() {
             const cid = getCampaignId();
+            console.log('Campaign ID:', cid);
 
             if (!cid) {
                 // Redirect to home if no campaign ID
@@ -259,6 +260,7 @@
             }
 
             const campaignData = getCampaignData(cid);
+            console.log('Campaign Data:', campaignData);
 
             // Update page title and meta tags
             document.getElementById('page-title').textContent = `${campaignData.title} | The Conservative Caucus`;
@@ -285,12 +287,14 @@
             }
 
             // Insert OneClickPolitics widget
+            console.log('Inserting widget with CID:', cid);
             const widgetWrapper = document.getElementById('campaign-widget-wrapper');
             const widget = document.createElement('one-click-widget');
             widget.setAttribute('cid', cid);
             widget.setAttribute('language', 'en');
             widget.setAttribute('env', 'production');
             widgetWrapper.appendChild(widget);
+            console.log('Widget element created:', widget);
         });
 
         // Social sharing functions
